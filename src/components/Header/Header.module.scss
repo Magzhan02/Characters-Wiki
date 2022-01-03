@@ -10,11 +10,18 @@
         display: flex;
         justify-content: flex-start;
         padding: 15px 100px;
-        color: #0b5ed7;
+        color: #000;
+        cursor: pointer;
+
+        span {
+            padding-left: 5px;
+            color: #1d6ee7;
+        }
     }
 
     .navbar {
         padding: 15px 300px;
+
         ul {
             li {
                 display: inline-block;

@@ -8,7 +8,11 @@ function Header() {
 
   return (
     <div className={style.header}>
-      <div className={style.logo}>The Rick and Morty Wiki</div>
+      <Link to="/">
+        <div className={style.logo}>
+          The Rick and Morty <span>Wiki</span>
+        </div>
+      </Link>
       <nav className={style.navbar}>
         <ul onClick={(e) => setActive(e.target.textContent)}>
           <Link to="/">
