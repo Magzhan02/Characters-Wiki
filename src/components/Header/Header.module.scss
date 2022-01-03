@@ -1,0 +1,32 @@
+.header {
+    background-color: #ffff;
+    height: 70px;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .logo {
+        font-size: 24px;
+        display: flex;
+        justify-content: flex-start;
+        padding: 15px 100px;
+        color: #0b5ed7;
+    }
+
+    .navbar {
+        padding: 15px 300px;
+        ul {
+            li {
+                display: inline-block;
+                font-size: 19px;
+                padding: 5px 10px;
+
+                &.active {
+                    color: #5193f5;
+                    border-bottom: 3px solid #1d6ee7;
+                }
+            }
+
+        }
+    }
+}
