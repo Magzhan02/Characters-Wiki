@@ -2,8 +2,8 @@ import React from 'react';
 
 import style from './Search.module.scss';
 
-function Search() {
-  const [search, setSearch] = React.useState('');
+function Search({setSearch}) {
+  
 
   return (
     <div className={style.wrapper}>
@@ -12,7 +12,6 @@ function Search() {
         <input
           type="text"
           placeholder="Character search..."
-          value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
       </form>
