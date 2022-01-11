@@ -37,3 +37,16 @@ ul {
 li {
   list-style: none;
 }
+
+.container{
+  display: flex;
+  flex-direction: row;
+  max-width: 1580px;
+  margin: 0px 120px;
+}
+
+.card-block{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 40px;
+}

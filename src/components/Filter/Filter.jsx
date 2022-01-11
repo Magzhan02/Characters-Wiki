@@ -5,16 +5,22 @@ import Status from './Categoria/Status';
 
 import style from "./Filter.module.scss"
 
-function Filter({ setSpecies, setGender, setStatus }) {
+function Filter({ setSpecies, setGender, setStatus}) {
+  const clearFilters = () =>{
+    setSpecies("");
+    setGender("");
+    setStatus("");
+    window.location.reload(false);
+  }
   return (
     <div className={style.wrapper}>
       <div className={style.title}>
         <h1>Filters</h1>
-        <span>Clear filters</span>
+        <span onClick={clearFilters}>Clear filters</span>
       </div>
-      <Gender setGender={setGender} />
+      <Gender setGender={setGender}  />
       <Species setSpecies={setSpecies} />
-      <Status setStatus={setStatus} />
+      <Status setStatus={setStatus}  />
     </div>
   );
 }

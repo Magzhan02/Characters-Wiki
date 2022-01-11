@@ -11,7 +11,7 @@ function Species({ setSpecies }) {
     'Planet',
     'Mythological',
     'Disease',
-    'Cornenberg',
+    'Cronenberg',
     'Poopybutthole',
     'Unknown',
   ];
