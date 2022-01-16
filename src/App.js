@@ -7,11 +7,17 @@ import Header from "./components/Header/Header";
 import Search from "./components/Search/Search";
 import Card from "./components/Card/Card";
 
+import Episode from "./page/Episode";
+
 function App() {
   return (
+    <>
+    <Header/>
     <Routes>
       <Route path="/" element={<Home/>}/>
+      <Route path="episode" element={<Episode/>}/>
     </Routes>
+    </>
   );
 }
 
@@ -28,19 +34,14 @@ function Home(){
   async function getData(){
     let {data} = await axios.get(api);
     setFetchData(data.results);
-    console.log(fetchData)
   }
-
-    
 
   React.useEffect(() => {
     getData();
-    console.log(fetchData)
   },[api])
 
   return(
     <div>
-      <Header/>
       <Search setSearch={setSearch}/>
       <div className="container">
         <div className="filter-block">

@@ -1,0 +1,17 @@
+.wrapp {
+
+    select {
+        padding: 7px 110px;
+        font-size: 17px;
+        border-radius: 5px;
+        border: 2px solid rgba($color: #1976d2, $alpha: .7);
+
+        option {
+            font-size: 17px;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
