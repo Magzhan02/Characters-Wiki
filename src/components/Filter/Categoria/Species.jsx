@@ -8,14 +8,13 @@ function Species({ setSpecies }) {
     'Humanoid',
     'Animal',
     'Robot',
-    'Planet',
     'Mythological',
     'Disease',
     'Cronenberg',
     'Poopybutthole',
     'Unknown',
   ];
-  const [activeItem, setActiveItem] = React.useState("");
+  const [activeItem, setActiveItem] = React.useState('');
 
   const updateSpecies = (e) => {
     setSpecies(e.target.textContent);

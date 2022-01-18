@@ -8,6 +8,7 @@ import Search from "./components/Search/Search";
 import Card from "./components/Card/Card";
 
 import Episode from "./page/Episode";
+import Location from "./page/Location";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
     <Routes>
       <Route path="/" element={<Home/>}/>
       <Route path="episode" element={<Episode/>}/>
+      <Route path="location" element={<Location/>}/>
     </Routes>
     </>
   );
