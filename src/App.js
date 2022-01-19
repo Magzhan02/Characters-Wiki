@@ -24,19 +24,23 @@ function App() {
 }
 
 function Home(){
+
   const [search,setSearch] = React.useState("");
   const [gender,setGender] = React.useState("");
   const [species,setSpecies] = React.useState("");
   const [status,setStatus] = React.useState("");
-  const [pageNumber, setPeageNumber] = React.useState(1);
+  const [pageNumber, setPageNumber] = React.useState(1);
   const [fetchData, setFetchData] = React.useState([]);
+  const [pageCount, setPageCount] = React.useState(null);
 
   let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`;
 
   async function getData(){
     let {data} = await axios.get(api);
     setFetchData(data.results);
+    setPageCount(data.info.pages)
   }
+  console.log(pageCount)
 
   React.useEffect(() => {
     getData();

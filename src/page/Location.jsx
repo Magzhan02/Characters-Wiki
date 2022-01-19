@@ -18,6 +18,7 @@ function Location() {
   const [Location, setLocation] = React.useState('1');
   const [info, setInfo] = React.useState([]);
   const [residents, setResidents] = React.useState([]);
+  let {dimension,name,type} = info;
   let api = `https://rickandmortyapi.com/api/location/${Location}`;
 
   React.useEffect(async () => {
@@ -36,8 +37,9 @@ function Location() {
   return (
     <>
       <div className={style.header}>
-        <h2>Location:</h2>
-        <h3>Dimension:</h3>
+        <h2>Location: {name}</h2>
+        <h3>Dimension: {dimension}</h3>
+        <h4>Type: {type}</h4>
       </div>
       <div className={style.wrapp}>
         <div className={style.select}>
