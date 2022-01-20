@@ -32,6 +32,7 @@ function Home(){
   const [pageNumber, setPageNumber] = React.useState(1);
   const [fetchData, setFetchData] = React.useState([]);
   const [pageCount, setPageCount] = React.useState(null);
+  const contain = React.useRef(null)
 
   let api = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${gender}&species=${species}`;
 
@@ -46,10 +47,20 @@ function Home(){
     getData();
   },[api])
 
+  const Scroll = () => contain.current.scrollIntoView()    
+
+  const getNewData = () =>{
+    Scroll()
+    if(pageNumber === 42){
+      setPageNumber(1)
+    }
+    setPageNumber((prev => prev + 1))
+  }
+
   return(
-    <div>
+    <div ref={contain}>
       <Search setSearch={setSearch}/>
-      <div className="container">
+      <div className="container" >
         <div className="filter-block">
           <Filter 
          setGender={setGender}
@@ -64,6 +75,9 @@ function Home(){
           ))
         }
         </div>
+      </div>
+      <div className="more">
+        <button onClick={getNewData} >More</button>
       </div>
     </div>
   );

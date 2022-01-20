@@ -43,10 +43,31 @@ li {
   flex-direction: row;
   max-width: 1580px;
   margin: 0px auto;
+  padding-bottom: 20px;
 }
 
 .card-block{
   display: flex;
   flex-wrap: wrap;
-  padding: 40px;
+  padding: 40px 0;
+}
+
+.more{
+  display: flex;
+  justify-content: center;
+  margin:  40px auto;
+
+  button{
+    padding: 10px 40px;
+    border: 1px solid #1d6ee7;
+    border-radius: 5px;
+    background-color: #3c3e44;
+    color: #ffff;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+  button:hover{
+    background-color: rgba($color: #3c3e44, $alpha: .3);
+    border: 1px solid rgba($color: #1d6ee7, $alpha: .3);
+  }
 }
