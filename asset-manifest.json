@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Characters-Wiki/static/css/main.0f035962.css",
+    "main.js": "/Characters-Wiki/static/js/main.7907c5fa.js",
+    "index.html": "/Characters-Wiki/index.html",
+    "main.0f035962.css.map": "/Characters-Wiki/static/css/main.0f035962.css.map",
+    "main.7907c5fa.js.map": "/Characters-Wiki/static/js/main.7907c5fa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f035962.css",
+    "static/js/main.7907c5fa.js"
+  ]
+}
